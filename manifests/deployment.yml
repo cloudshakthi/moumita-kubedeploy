@@ -1,0 +1,19 @@
+apiVersion : apps/v1
+kind: Deployment
+metadata:
+  name: cloudshakthimoumitakubedeploy 
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: cloudshakthimoumitakubedeploy
+  template:
+    metadata:
+      labels:
+        app: cloudshakthimoumitakubedeploy 
+    spec:
+      containers:
+        - name: cloudshakthimoumitakubedeploy 
+          image: acr280525.azurecr.io/cloudshakthimoumitakubedeploy
+          ports:
+          - containerPort: 8080
